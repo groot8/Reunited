@@ -1,16 +1,66 @@
+@import 'scss/mixins.scss';
+@import 'scss/colors.scss';
+@import 'scss/typography.scss';
+@import 'scss/animations.scss';
+
+* {
+  // scrollbar-width: none;
+  // -moz-scrollbar-width: none;
+  // -ms-scrollbar-width: none;
+  font-family: 'Poppins' !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+dl,
+p {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+html {
+  font-size: 100%;
+  height: 100%;
+  --antd-wave-shadow-color: rgba(57, 73, 76, 0.35);
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 87.5%; //1 rem = 14px, 14/16 = 87.5%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 75%; //1 rem = 12px, 12/16 = 75%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 112.5%; //1rem = 18px, 18/16 = 12.5%
+  }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-family: 'Poppins, Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.app{
-  background-color: yellow;
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
 }
